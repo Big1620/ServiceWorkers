@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="Pomo.css">
+</head>
+<body>
+    <div class="pomodoro-container">
+        <button class="back-button" onclick="goBack()">
+            <i class="fas fa-arrow-left"></i>
+        </button>
+        <h1>FocusTime</h1>
+        <div class="button-group">
+            <button class="blob-btn active" data-mode="pomodoro">
+                Pomodoro
+                <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                    </span>
+                </span>
+            </button>
+            <button class="blob-btn" data-mode="shortBreak">
+                Descanso Corto
+                <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                    </span>
+                </span>
+            </button>
+            <button class="blob-btn" data-mode="longBreak">
+                Descanso Largo
+                <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                    </span>
+                </span>
+            </button>
+        </div>
+        <div class="timer">25:00</div>
+        <div class="control-buttons">
+            <button class="blob-btn start-button">
+                EMPEZAR
+                <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                    </span>
+                </span>
+            </button>
+            <button class="blob-btn skip-button" style="display: none;">
+                <i class="fas fa-forward"></i>
+                <span class="blob-btn__inner">
+                    <span class="blob-btn__blobs">
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                        <span class="blob-btn__blob"></span>
+                    </span>
+                </span>
+            </button>
+        </div>
+        <div class="session-count">#1</div>
+        <div class="message">¡Es hora de concentrarse!</div>
+        <div class="rules">
+            <h2>Reglas del método Pomodoro:</h2>
+            <ul>
+                <li>Elige tu tema de estudio.</li>
+                <li>Empieza a estudiar en intervalos de 25min.</li>
+                <li>Cada 25min descansa 5min.</li>
+                <li>Al culminar el cuarto bloque de 25min toma un descanso de 15min.</li>
+                <li>Comienza un nuevo ciclo.</li>
+                <li>Durante tus descansos NO uses el teléfono NI entres a redes sociales.</li>
+            </ul>
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+        <defs>
+            <filter id="goo">
+                <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+                <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+            </filter>
+        </defs>
+    </svg>
+
+    <script src="Pomo.js"></script>
+</body>
+</html>

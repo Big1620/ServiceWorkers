@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>DualFocus</title>
+
+</head>
+<body>
+    <div id="loginPage">
+        <h1>Bienvenido a DualFocus!</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Nombre de usuario" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <button onclick="showCreateProfile()">Crear perfil</button>
+        <button onclick="showProfileManagement()">Gestionar perfiles</button>
+    </div>
+
+    <div id="createProfileSection" style="display: none;">
+        <h2>Crear Perfil</h2>
+        <form id="createProfileForm">
+            <input type="text" id="newUsername" placeholder="Nombre de usuario" required>
+            <input type="text" id="fullName" placeholder="Nombre completo" required>
+            <input type="email" id="email" placeholder="Correo electrónico" required>
+            <button type="submit">Crear Perfil</button>
+        </form>
+        <button onclick="showMainContent()">Volver</button>
+    </div>
+
+    <div id="profileManagement" style="display: none;">
+        <h2>Gestión de Perfiles</h2>
+        <div id="profileList"></div>
+        <button onclick="showMainContent()">Volver</button>
+    </div>
+
+    <div id="taskPage" style="display: none;"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

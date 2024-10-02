@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DualFocus - Lista de Tareas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="Todo.css">
+    <!-- Aquí irían tus estilos CSS -->
+</head>
+<body>
+    <header>
+        <h1>¡Hola! <span id="profileName"></span></h1>
+        <p>Tu compañero para mantener tus tareas y estudios organizados.</p>
+        <div class="button-container-1">
+            <button id="playButton">PLAY</button>
+        </div>
+        <div class="button-container-1" style="right: 190px;">
+            <button id="logoutButton">CERRAR SESIÓN</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="tareas">
+            <div class="perfil">
+                <h2>Lista de tareas:</h2>
+                <p>¡Mantén el control de tus tareas! Anota tus trabajos y pendientes para evitar el estrés de última hora. Cada tarea completada es un paso hacia el éxito. ¡Organiza, planifica y conquista tu día para sacar las mejores notas y aprovechar tu tiempo al máximo!</p>
+            </div>
+            <div class="agregar-item">
+                <input type="text" id="input-tarea" placeholder="Agregar una nueva tarea">
+                <button id="boton-enter-tarea">Agregar</button>
+            </div>
+            <ul id="lista-tareas" class="seccion-items">
+                <!-- Las tareas se agregarán aquí dinámicamente -->
+            </ul>
+        </div>
+
+        <div class="repasos">
+            <div class="perfil">
+                <h2>Lista de estudio:</h2>
+                <p>¡Prepárate para el éxito! Organiza tus temas, exposiciones y evaluaciones aquí. Cada repaso te acerca a dominarlo todo y obtener las mejores notas. ¡No dejes que nada se te escape!</p>
+            </div>
+            <div class="agregar-item">
+                <input type="text" id="input-repaso" placeholder="Agregar un nuevo repaso">
+                <button id="boton-enter-repaso">Agregar</button>
+            </div>
+            <ul id="lista-repasos" class="seccion-items">
+                <!-- Los repasos se agregarán aquí dinámicamente -->
+            </ul>
+        </div>
+    </main>
+
+    <script src="Todo.js"></script>
+</body>
+</html>
